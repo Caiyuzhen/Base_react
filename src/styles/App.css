@@ -103,4 +103,17 @@ li{
 	padding: 8px 12px;
 }
 
+.changeBtn{
+	border: none;
+	color: none;
+	height: min-content;
+	width: min-content;
+	padding: 0;
+	margin-left: 12px;
+}
+
+.changeBtn:hover{
+	cursor: pointer;
+}
+
 
