@@ -1,0 +1,106 @@
+html{
+	margin:0;
+	padding: 0;
+}
+
+
+.App {
+	margin:0 auto;
+	padding: 24px;
+	/* 垂直居中 */
+	position: relative;
+	/* top:50%; */
+	transform:translateY(50%);
+	text-align: center;
+	width: 80%;
+	height:100%;
+	background-color: #efeef6;
+	border-radius: 16px;
+	display: Grid;
+	grid-template-areas: 
+		"head head"
+		"left right";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 24px [c2] 1fr;;
+	row-gap: 3em;
+	column-gap: 1.5rem;
+}
+
+
+.title{
+	font-size: 32px;
+	font-weight: 600;
+	width: 100%;
+	grid-area: head;
+}
+
+
+.wrapperOne{
+	grid-area: left;
+	background-color: #f7f7fb;
+	border-radius: 16px;
+	height: min-content;
+	padding: 12px;
+}
+
+
+.wrapperTwo{
+	grid-area: right;
+	background-color: #f7f7fb;
+	border-radius: 16px;
+	height: min-content;
+	padding: 12px;
+}
+
+
+input {
+	width: 80%;
+	border: none;
+	padding: 8px 12px;
+	border-radius: 6px;
+}
+
+
+input:focus{
+	outline: none;
+	/* 聚焦时显示内边框 */
+	border: 1px solid #6b56f0;
+	box-sizing: content-box;
+}
+
+
+li{
+	margin: 10px 4px 10px 10px;
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.addButton:hover{
+	cursor: pointer;
+}
+
+
+.removeBtn:hover{
+	cursor: pointer;
+}
+
+
+.addButton {
+	border: none;
+	color: #fff;
+	background-color: #6b56f0;
+	border-radius: 6px;
+	padding: 8px 12px;
+}
+
+.removeBtn{
+	border: none;
+	color: rgb(200, 61, 137);
+	background-color: #ffeaf1;
+	border-radius: 6px;
+	padding: 8px 12px;
+}
+
+

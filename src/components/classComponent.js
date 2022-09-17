@@ -12,7 +12,7 @@ class TodoList extends Component {
 
 	//🔥🔥在页面加载完成后，获取本地存储的数据
 	componentDidMount() {
-		this.setState({
+		this.setState({ //class 组件中的 setState 需要用 this
 			list: getStorage() || []
 		})
 	}
@@ -93,11 +93,11 @@ class TodoList extends Component {
 		const { list } = this.state
 
 		return(
-			<div className='wrapper'>
+			<div className='wrapperTwo'>
 				<div className="inputBox">
 					{/* 🔥🔥 方法一（需要 bind 绑定）：this.setInputValue.bind(this)  🔥表示把原本指向 input 的 this 改编为指向改为整个【类】,否则无法改变 state */}
 					<input type='text'  onChange={ this.setInputValue.bind(this) }  placeholder='input something...'/>
-					<button onClick={ this.addItem }> 添加 </button>
+					<button onClick={ this.addItem }  className='addButton'> 添加 </button>
 				</div>
 				<div className="list-box">
 					<div className="list">
@@ -110,7 +110,7 @@ class TodoList extends Component {
 										{/* 传入 id 来删除对应 todo */}
 										<button 
 											//传入出当先选项的 id
-											onClick={ this.removeItem.bind(this, item.id) }> 删除 </button>
+											onClick={ this.removeItem.bind(this, item.id) }  className="removeBtn"> 删除 </button>
 									</li>
 								)
 							})
