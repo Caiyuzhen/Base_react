@@ -5,7 +5,7 @@ import {getStorage,setStorage} from './utils/storage'
 
 function TodoList2 () {
 
-	const [list,setList] = useState([]), //[] 为默认值
+	const [list,setList] = useState([]), //[] 为默认值, 是个空数组
 		 [inputValue, setInputValue] = useState(''), //'' 为默认值
 		 [ name, setName ] = useState('myTodoList')
 
@@ -24,8 +24,8 @@ function TodoList2 () {
 
 	function addItem () {
 		setList(setStorage({ //需要两个参数，可以传入一个对象
-			id: new Date().getTime(),
-			text: inputValue
+			text: inputValue,
+			id: new Date().getTime()
 		}))
 	}
 		
