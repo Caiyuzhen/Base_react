@@ -10,7 +10,7 @@ html{
 	/* 垂直居中 */
 	position: relative;
 	/* top:50%; */
-	transform:translateY(50%);
+	/* transform:translateY(50%); */
 	text-align: center;
 	width: 80%;
 	height:100%;
@@ -114,6 +114,14 @@ li{
 
 .changeBtn:hover{
 	cursor: pointer;
+}
+
+
+/* 列表显示 */
+.productShow{
+	display: block;
+	background-color: #b7b7de;
+	padding: 8px 12px;
 }
 
 

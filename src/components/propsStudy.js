@@ -67,9 +67,9 @@ function Profile() {
 function ChildScore({score}) {
 
 	function getScore(score) {//逻辑上应该抽离成工具函数
-		if(score > 90 && score <100){ //逻辑且
+		if(score >= 90 && score <100){ //逻辑且
 			return "A+"
-		}else if (score < 90 && score >60){
+		}else if (score < 90 && score >=60){
 			return "B+"
 		}else{
 			return "C+"
@@ -95,7 +95,7 @@ function ChildScore({score}) {
 
 function FatherScore(){
 	return(
-		<ChildScore score='80'/>
+		<ChildScore score='90'/>
 	)
 }
 
