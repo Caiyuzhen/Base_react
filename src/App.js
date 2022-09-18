@@ -5,6 +5,9 @@ import Title,{FatherScore} from './components/propsStudy';
 import Tran from './components/useTransition'
 import ExampleContext from './components/useContext/useContext01'
 import {HomePage} from './components/useContext/homePageContext'
+import Counter from './components/useReducer'
+import Ref from './components/ref'
+import {Main} from './components/portals_render'
 
 
 
@@ -18,6 +21,9 @@ function App() {
 		<Tran />
 		<ExampleContext />
 		<HomePage />
+		<Counter />
+		<Ref />
+		<Main />
     </div>
   );
 }

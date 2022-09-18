@@ -2,8 +2,6 @@ import React, { createContext, useContext, useState } from 'react'
 import{Login, UserContext} from './loginContextHook'
 
 
-
-
 export const HomePage = () => {
 	return(
 		<>
@@ -18,7 +16,6 @@ export const HomePage = () => {
 }
 
 
-
 export const Header = () => {
 	// 🔥🔥这里就能解构出 【登录组件】的数据了！！
 	const {userInfo,isAuth,login,logOut} = useContext(UserContext)
@@ -28,11 +25,11 @@ export const Header = () => {
 			<h1>
 				{/* 根据登录状态判读 UI, 调用 context 解构出来的 logOut 登出方法！！ */}
 				{isAuth ? 
-					<>你好
+					<>🌞你好
 						{userInfo.userName} 
 						<button onClick={()=>logOut()}>登出</button>
 					</> :
-					<>请登录 
+					<>👀请登录 
 						<button onClick={()=>login()}>登录</button>
 					</>
 				}
@@ -41,9 +38,17 @@ export const Header = () => {
 		)
 }
 
+
 export const Content = () => {
-	return <div>主体内容</div>
+	//🍎🍎获取 context 数据！！
+	const {userInfo,isAuth} = useContext(UserContext)
+	return (
+		<div>主体内容
+			{isAuth && <>{userInfo.userName}</>}
+		</div>
+	)
 }
+
 
 export const Footer = () => {
 	return <footer>页尾</footer>
