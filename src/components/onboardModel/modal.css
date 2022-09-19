@@ -1,0 +1,119 @@
+/* 遮罩 */
+.modalContainer{
+    position:fixed;
+    width:100vw;
+    height:100%;
+    display:flex;
+    top:0;
+    bottom:0;
+    right:0;
+    right:0;
+    justify-content:center;
+    align-items: center;
+    background-color:rgba(0,0,0,0.6);
+}
+
+.modal{
+    width:90%;
+    max-width:500px;
+    border:5px;
+    padding:24px;
+    background-color:white;
+	border-radius: 16px;
+    display:flex;
+    flex-direction:column;
+    align-content: space-between;
+    box-sizing: border-box;
+}
+
+.modal__head{
+    display:flex;
+    justify-content:space-between;
+    position:relative;
+}
+
+.modal__close{
+    position:absolute;
+    top:15px;
+    right:0;
+    font-size:24px;
+    font-weight:500;
+    cursor: pointer;
+	border:	none;
+	color:rgb(97, 95, 101);
+	background-color: transparent;
+}
+
+.modal__close:hover{
+    color:rgb(34, 33, 34);
+}
+
+.modal__foot{
+    box-sizing:border-box;
+    margin-top:20px;
+    width:100%;
+	gap: 12px;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.btn-onboardStart{
+	border: none;
+	padding: 24px;
+}
+
+.btn-onboardStart:hover{
+	cursor: pointer
+}
+
+.btn-cancel{
+	height: 40px;
+    background-color:rgb(234, 227, 227);
+    padding:10px 24px;
+    border:none;
+	border-radius: 6px;
+    outline:none;
+	/* 文字不换行 */
+	white-space: nowrap;
+}
+
+.btn-cancel:hover{
+	cursor: pointer
+}
+
+.btn-confirm {
+	height: 40px;
+    color:white;
+    background-color: rgb(89, 89, 223);
+	padding:10px 24px;
+    border:none;
+	border-radius: 6px;
+    outline:none;
+	/* 文字不换行 */
+	white-space: nowrap;
+}
+
+.btn-confirm:hover{
+	cursor: pointer
+}
+
+.btn-confirm:focus, .btn-cancel:focus,.modal__close:focus{
+    border:4px solid rgba(225, 8, 149,0.9);
+}
+
+.modal .tip{
+    background-color:rgba(36, 16, 251, 0.6);
+    padding:10px;
+    border-radius:12px;
+    transition: all 0.3s ease-in-out;
+	-webkit-backdrop-filter: blur(10px);/* 👈毛玻璃效果 */
+	backdrop-filter: blur(10px);/* 👈毛玻璃效果 */
+}
+/* 
+.tip::before{
+	content: '';
+	position: absolute;
+	top:0;right:0;bottom:0;left:0;
+	z-index: -1;
+	filter: blur(20px);
+} */
